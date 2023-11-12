@@ -8,8 +8,6 @@ class Note {
 
 class App {
   constructor() {
-      // localStorage.setItem('test', JSON.stringify(['123']));
-      // console.log(JSON.parse(localStorage.getItem('test')));
       this.notes = [];
       console.log(this.notes);
       this.selectedNoteId = ""
@@ -248,7 +246,7 @@ handleAuth() {
               this.notes = doc.data().notes;
               this.displayNotes();
           } else {
-              // doc.data() will be undefined in this case
+              
               console.log("No such document!");
               db.collection("users").doc(this.userId).set({
                   notes: []
